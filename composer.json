@@ -15,7 +15,12 @@
         {
             "name": "Marco Muths",
             "email": "mamuz.de@gmail.com"
-        }
+        },
+	{
+		"name": "Alper Kaya",
+		"email": "preadatortr@gmail.com"
+	}
+
     ],
     "support": {
         "issues": "https://github.com/mamuz/PhpDependencyAnalysis/issues",
@@ -24,7 +29,7 @@
     "config": {
         "optimize-autoloader": true
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": "^5.6 || ^7.0",
@@ -36,7 +41,7 @@
         "phpdocumentor/reflection-docblock": "~3.1",
         "doctrine/collections": "~1.0",
         "symfony/yaml": "~2.5|~3.0",
-        "symfony/console": "~2.8|~3.0",
+        "symfony/console": "~2.8|^3.0|^4.0",
         "symfony/finder": "~2.8|~3.0",
         "padraic/phar-updater": "~1.0"
     },
@@ -57,11 +62,6 @@
     "bin": [
         "bin/phpda"
     ],
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.4-dev"
-        }
-    },
     "scripts": {
         "test": "./vendor/bin/codecept run --env bin --env phar",
         "phar": "./build/phar.sh"
