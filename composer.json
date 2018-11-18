@@ -15,7 +15,12 @@
         {
             "name": "Marco Muths",
             "email": "mamuz.de@gmail.com"
-        }
+        },
+	{
+		"name": "Alper Kaya",
+		"email": "preadatortr@gmail.com"
+	}
+
     ],
     "support": {
         "issues": "https://github.com/mamuz/PhpDependencyAnalysis/issues",
@@ -24,7 +29,7 @@
     "config": {
         "optimize-autoloader": true
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": "^5.6 || ^7.0",
