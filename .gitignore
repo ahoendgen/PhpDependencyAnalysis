@@ -2,3 +2,4 @@ composer.lock
 vendor
 tests/_output/*
 phar-private.pem
+phar-private-pass.pem
