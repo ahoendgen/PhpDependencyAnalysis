@@ -170,7 +170,7 @@ class NodeTraverser extends \PhpParser\NodeTraverser implements AdtAwareInterfac
         return $visitor;
     }
 
-    public function traverse(array $nodes)
+    public function traverse(array $nodes) : array
     {
         if ($this->hasAdt()) {
             foreach ($this->visitors as $visitor) {

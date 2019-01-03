@@ -4,15 +4,17 @@ ARG COMPOSER_OPTS
 
 RUN apk --no-cache add curl git openssl graphviz
 
-COPY composer.json /app/composer.json
-COPY ./build/composer.sh /app/build/composer.sh
 WORKDIR /app
+COPY ./build/composer.sh ./build/composer.sh
 
 RUN ./build/composer.sh
 RUN composer global require hirak/prestissimo
 RUN composer global require kherge/box
-RUN composer install $COMPOSER_OPTS
 RUN echo "phar.readonly = Off;" > $PHP_INI_DIR/conf.d/phar.ini
+
+COPY composer.json ./composer.json
+
+RUN composer install $COMPOSER_OPTS
 
 RUN apk --no-cache add $PHPIZE_DEPS openssl-dev libzip-dev
 
