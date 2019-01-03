@@ -8,5 +8,6 @@ COPY . /app
 WORKDIR /app
 
 RUN ./build/composer.sh && composer update $COMPOSER_OPTS \
+    && composer global require hirak/prestissimo \
     && composer global require kherge/box --prefer-source \
     && echo "phar.readonly = Off;" > $PHP_INI_DIR/conf.d/phar.ini

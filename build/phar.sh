@@ -6,4 +6,3 @@ mv ./download/phpda.phar ./download/phpda
 mv ./download/phpda.phar.pubkey ./download/phpda.pubkey
 sha1sum ./download/phpda > ./download/phpda.version
 chmod +x ./download/phpda
-composer install
